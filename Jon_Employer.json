@@ -1,0 +1,235 @@
+Jon_Employer
+Job_JobApplication
+Job_Joblisting
+Jib_JobSeeker
+Job_Skills
+Job_User
+Job_WorkExperience
+
+api/login {
+  "UserName": "string",
+  "Password": "string"
+}
+
+api/GetAllJobCategory{
+
+    "data": [
+    {
+      "jobCategoryId": 1,
+      "categoryName": "Human Resources"
+    },
+    {
+      "jobCategoryId": 2,
+      "categoryName": "Marketing & Communication"
+    },
+    {
+      "jobCategoryId": 3,
+      "categoryName": "shirt"
+    },
+    {
+      "jobCategoryId": 4,
+      "categoryName": "IT & Information Security"
+    }
+}
+
+api/AddBulkJobCategory { [
+    {
+      "JobCategoryId": 0,
+      "CategoryName": "string"
+    }
+  ]}
+
+  api/GetAllEmployer{
+    "data": [
+        {
+          "employerId": 7,
+          "companyName": "Wipro",
+          "emailId": "",
+          "mobileNo": "9988998899",
+          "phoneNo": "99998877",
+          "companyAddress": "Hinjwadi, Phase 2",
+          "city": "Pune",
+          "state": "Mah",
+          "pinCode": "441212",
+          "logoURL": "https://hindubabynames.info/wp-content/themes/hbn_download/download/information-technology-companies/wipro-logo.png",
+          "gstNo": "WI-0099"
+        }
+    ]
+  }
+  api/GetEmployerById?employerId=5 {
+    {
+        "message": "",
+        "result": true,
+        "data": {
+          "employerId": 10,
+          "companyName": "cybage",
+          "emailId": "career@cybage.com",
+          "mobileNo": "9989988991",
+          "phoneNo": "9989988992",
+          "companyAddress": "7th Floor, Block, DLF Commercial Developers Ltd. (SEZ, 2, Serilingampalle (M), Telangana 500019",
+          "city": "hyderabad",
+          "state": "telangana ",
+          "pinCode": "500019",
+          "logoURL": "https://www.cybage.com/sites/default/files/2021-09/Cybage_Logo_0.png",
+          "gstNo": "cyb-1234"
+        }
+      }
+  }
+  api/addNewEmployer 
+    {
+        "EmployerId": 0,
+        "CompanyName": "string",
+        "EmailId": "string",
+        "MobileNo": "string",
+        "PhoneNo": "string",
+        "CompanyAddress": "string",
+        "City": "string",
+        "State": "string",
+        "PinCode": "string",
+        "LogoURL": "string",
+        
+  }
+
+  api/GetAllJobSeeker{
+    "message": "",
+  "result": true,
+  "data": [
+    {
+      "jobSeekerId": 31,
+      "fullName": "string",
+      "emailId": "string",
+      "mobileNo": "string",
+      "experienceStatus": "string",
+      "resumeUrl": "string"
+    },
+    {
+      "jobSeekerId": 32,
+      "fullName": "Narsing D S",
+      "emailId": "Narsing@gmail.com",
+      "mobileNo": "8208741371",
+      "experienceStatus": "Fresher",
+      "resumeUrl": ""
+    }
+  }
+  api/AddNewJobSeeker{
+    {
+        "JobSeekerId": 0,
+        "FullName": "string",
+        "EmailId": "string",
+        "MobileNo": "string",
+        "ExperienceStatus": "string",
+        "ResumeUrl": "string",
+        "JobSeekerSkills": [
+          {
+            "SkillId": 0,
+            "JobSeekarId": 0,
+            "SkillName": "string",
+            "DurationOfSkill": "string"
+          }
+        ],
+        "JobSeekerWorkExperiences": [
+          {
+            "WorkExpId": 0,
+            "JobSeekerId": 0,
+            "CompanyName": "string",
+            "IsCurrentCompany": true,
+            "Profile": "string",
+            "StartDate": "2024-01-05T22:49:10.213Z",
+            "EndDate": "2024-01-05T22:49:10.213Z",
+            "JobDescription": "string"
+          }
+        ]
+      }
+  }
+  api/GetAllJobListing {
+    {
+        "message": "",
+        "result": true,
+        "data": [
+          {
+            "jobName": "Junior .Net Developer",
+            "package": "3-4 LPA",
+            "experience": "Fresher",
+            "location": "Delhi / NCR( Noida-Greater Noida Expressway )",
+            "categoryName": "IT & Information Security",
+            "logoURL": "https://png.pngtree.com/png-clipart/20190611/original/pngtree-wolf-logo-png-image_2306634.jpg",
+            "companyName": "Maryasal Technology",
+            "jobId": 112
+          },
+          {
+            "jobName": "Python Developer",
+            "package": "10-12",
+            "experience": "Experience",
+            "location": "Hybrid,",
+            "categoryName": "IT & Information Security",
+            "logoURL": "https://media.licdn.com/dms/image/C560BAQGp8Wqs4vLUoA/company-logo_200_200/0/1661326153568?e=2147483647&v=beta&t=2zQWqNBQACaOA4kUC9ce8ELLkEpJm70mwr-jrPhTLC0",
+            "companyName": "Nexturn",
+            "jobId": 111
+          }
+        ]
+      }
+api/GetJobsByEmployerId?employerId=7 {
+    "message": "",
+  "result": true,
+  "data": [
+    {
+      "jobName": "HR",
+      "package": "20 Lakh",
+      "experience": "Experiance",
+      "location": "Dubai",
+      "categoryName": "Marketing & Communication",
+      "jobId": 97
+    },
+    {
+      "jobName": "abc",
+      "package": "4-5LPA",
+      "experience": "Experienced",
+      "location": "ggn",
+      "categoryName": "IT & Information Security",
+      "jobId": 71
+    },
+}
+api/CreateNewJobListing {
+    {
+        "JobId": 0,
+        "JobName": "string",
+        "CreatedDate": "2024-01-07T18:50:14.139Z",
+        "EmployerId": 0,
+        "CategoryId": 0,
+        "Experience": "string",
+        "Package": "string",
+        "Location": "string",
+        "JobDescription": "string",
+        "IsActive": true
+      }
+}
+api/GetJobListingById?jobId=112 {
+    {
+        "message": "",
+        "result": true,
+        "data": {
+          "jobName": "Junior .Net Developer",
+          "package": "3-4 LPA",
+          "experience": "Fresher",
+          "location": "Delhi / NCR( Noida-Greater Noida Expressway )",
+          "categoryName": "IT & Information Security",
+          "logoURL": "https://png.pngtree.com/png-clipart/20190611/original/pngtree-wolf-logo-png-image_2306634.jpg",
+          "companyName": "Maryasal Technology",
+          "jobId": 112,
+          "jobDescription": "As a Junior. NET developer must have experience with .Net development.\nCreation of CRUD API in ASP. Net Core.\nUnderstanding of .Net core services\nData Transfer Object (DTO)\nMust have knowledge of GIT Basic Concept\nUse of DB Context for 1-to-many and many-to-many relationships.\nUnderstanding of dependency interjections.\nUnderstanding of the use of interfaces in C# and .net Core.\nMust have knowledge of one or more .NET languages (like C#, Visual Basic .NET) and HTML5/CSS3.\nFamiliar with the ASP.NET framework, SQL Server and design/architectural patterns (e.g. Model- View-Controller) and designing REST or PRC APIs.\nTesting the developed software to ensure it meets the data, logical, and functional requirements\nCandidates must have analytical and good at time management.\n• Must have great communication and problem-solving skills.\n• Curious about new technologies and should be excited to find ways to implement them in work.\n• Candidate must have a Devotion to learn and improve his/her .Net skills.\nTroubleshoot and resolve software defects and issues in a timely manner.",
+          "employerId": 308,
+          "categoryId": 4,
+          "companyAddress": "Uattar Pradesh",
+          "emailId": "marysal@info.com"
+        }
+      }
+}
+/api/SendJobApplication{
+    {
+        "ApplicationId": 0,
+        "JobId": 0,
+        "JobSeekerId": 0,
+        "AppliedDate": "2024-01-08T13:09:57.555Z",
+        "ApplcationStatus": "string"
+      }
+}
