@@ -233,3 +233,10 @@ api/GetJobListingById?jobId=112 {
         "ApplcationStatus": "string"
       }
 }
+get api//GetApplcationsByJobSeekerId?jobSeekerId=8 {
+    {
+        "message": "",
+        "result": true,
+        "data": []
+      }
+}
